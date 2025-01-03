@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/WS-Schlossgut-Schwansee/static/css/main.320a186a.css",
-    "main.js": "/WS-Schlossgut-Schwansee/static/js/main.1ea1edb8.js",
+    "main.css": "/WS-Schlossgut-Schwansee/static/css/main.cabdb6a3.css",
+    "main.js": "/WS-Schlossgut-Schwansee/static/js/main.d45595ba.js",
     "index.html": "/WS-Schlossgut-Schwansee/index.html",
-    "main.320a186a.css.map": "/WS-Schlossgut-Schwansee/static/css/main.320a186a.css.map",
-    "main.1ea1edb8.js.map": "/WS-Schlossgut-Schwansee/static/js/main.1ea1edb8.js.map"
+    "main.cabdb6a3.css.map": "/WS-Schlossgut-Schwansee/static/css/main.cabdb6a3.css.map",
+    "main.d45595ba.js.map": "/WS-Schlossgut-Schwansee/static/js/main.d45595ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.320a186a.css",
-    "static/js/main.1ea1edb8.js"
+    "static/css/main.cabdb6a3.css",
+    "static/js/main.d45595ba.js"
   ]
 }

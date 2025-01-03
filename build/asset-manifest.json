@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WS-Schlossgut-Schwansee/static/css/main.320a186a.css",
+    "main.js": "/WS-Schlossgut-Schwansee/static/js/main.1ea1edb8.js",
+    "index.html": "/WS-Schlossgut-Schwansee/index.html",
+    "main.320a186a.css.map": "/WS-Schlossgut-Schwansee/static/css/main.320a186a.css.map",
+    "main.1ea1edb8.js.map": "/WS-Schlossgut-Schwansee/static/js/main.1ea1edb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.320a186a.css",
+    "static/js/main.1ea1edb8.js"
+  ]
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { DecisionGraph } from './DecisionGraph.tsx';
 
 export function WorkshopSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,9 +23,7 @@ export function WorkshopSlideshow() {
               "C-Level-Führungskräfte müssen in einer dynamischen Welt klare Entscheidungen treffen – oft mit wenig Zeit und Transparenz."
             </blockquote>
             
-            <div className="flex justify-center mb-8">
-              <img src="/decision-graph.png" alt="Entscheidungsgraph mit Verbindungen zwischen Daten, Zeit, Team und Ressourcen" className="max-w-md" />
-            </div>
+            <DecisionGraph />
           </div>
 
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">

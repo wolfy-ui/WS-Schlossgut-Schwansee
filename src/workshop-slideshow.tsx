@@ -4,20 +4,24 @@ import { DecisionGraph } from './DecisionGraph.tsx';
 
 export function WorkshopSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
   const [hoveredButton, setHoveredButton] = useState(null);
 
-  useEffect(() => {
-    setIsAnimating(true);
-    const timer = setTimeout(() => setIsAnimating(false), 500);
-    return () => clearTimeout(timer);
-  }, [currentSlide]);
+  const goToSlide = (index: number) => {
+    setIsVisible(false);
+    setTimeout(() => {
+      setCurrentSlide(index);
+      setIsVisible(true);
+    }, 300);
+  };
 
   const slides = [
     {
       title: "Herausforderungen im Management",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <blockquote className="text-xl font-medium text-gray-900 mb-8">
               "C-Level-Führungskräfte müssen in einer dynamischen Welt klare Entscheidungen treffen – oft mit wenig Zeit und Transparenz."
@@ -39,7 +43,9 @@ export function WorkshopSlideshow() {
     {
       title: "Die Perspektive des C-Levels",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="space-y-6">
             <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Wie steht es um unseren Zielzustand?</h3>
@@ -63,7 +69,9 @@ export function WorkshopSlideshow() {
     {
       title: "Workshop-Ablauf",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Ideenfindung</h3>
             <div className="ml-4 space-y-2">
@@ -86,7 +94,9 @@ export function WorkshopSlideshow() {
     {
       title: "How Might We - Methode",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">1. Formulieren Sie "How Might We"-Fragen (10 Min)</h3>
             <div className="ml-4 space-y-2">
@@ -109,7 +119,9 @@ export function WorkshopSlideshow() {
     {
       title: "Crazy 8s Methode",
       content: () => (
-        <div className={`space-y-8 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-8 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Vorbereitung</h3>
             <div className="ml-4 space-y-2">
@@ -216,7 +228,9 @@ export function WorkshopSlideshow() {
     {
       title: "Solution Sketch",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Ausarbeitung (25 Min)</h3>
             <div className="ml-4 space-y-2">
@@ -241,7 +255,9 @@ export function WorkshopSlideshow() {
     {
       title: "Team Review",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Vorstellung (10 Min)</h3>
             <div className="ml-4 space-y-2">
@@ -264,7 +280,9 @@ export function WorkshopSlideshow() {
     {
       title: "Team-Präsentation & Synthese",
       content: () => (
-        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Team-Pitches (25 Min)</h3>
             <div className="ml-4 space-y-2">
@@ -302,7 +320,7 @@ export function WorkshopSlideshow() {
         
         <div className="absolute inset-x-0 bottom-4 flex justify-center items-center space-x-4">
           <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+            onClick={() => goToSlide((currentSlide - 1 + slides.length) % slides.length)}
             onMouseEnter={() => setHoveredButton('prev')}
             onMouseLeave={() => setHoveredButton(null)}
             className={`p-2 rounded-full transition-all duration-300 ${
@@ -321,7 +339,7 @@ export function WorkshopSlideshow() {
           </span>
 
           <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+            onClick={() => goToSlide((currentSlide + 1) % slides.length)}
             onMouseEnter={() => setHoveredButton('next')}
             onMouseLeave={() => setHoveredButton(null)}
             className={`p-2 rounded-full transition-all duration-300 ${

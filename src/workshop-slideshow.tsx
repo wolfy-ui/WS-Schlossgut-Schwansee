@@ -17,6 +17,20 @@ export function WorkshopSlideshow() {
 
   const slides = [
     {
+      title: "Icebreaker",
+      content: () => (
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            Icebreaker
+          </div>
+        </div>
+
+      )
+    },
+
+    {
       title: "Herausforderungen im Management",
       content: () => (
         <div className={`space-y-6 transition-opacity duration-500 ${
@@ -61,6 +75,35 @@ export function WorkshopSlideshow() {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Wie engagiert ist die Organisation?</h3>
               <p className="text-lg text-gray-700 ml-4">• Was motiviert unsere Teams, diesen Weg mitzugehen?</p>
             </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Deine Aufgabe – Play",
+      content: () => (
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Identifiziere die Kernprobleme aus deiner Sicht:</h3>
+            <p className="text-gray-700 ml-4">• Wo siehst du die größten Herausforderungen für Führungskräfte im Umgang mit Zielen, Fortschritt und Engagement?</p>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Entwickle erste Ansätze:</h3>
+            <div className="ml-4 space-y-2">
+              <p className="text-gray-700">• Welche Ideen könnten diese Herausforderungen lösen?</p>
+              <p className="text-gray-700">• Wie sollte eine AI-led Software gestaltet sein, um den C-Level optimal zu unterstützen?</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Hinweis:</h3>
+            <p className="text-gray-700 ml-4">
+              Denke kreativ und pragmatisch. Gehe dabei spielerisch vor. Fachliche Details spielen heute keine Rolle. 
+              Frag dich einfach: Was würde wirklich gut funktionieren?
+            </p>
           </div>
         </div>
       )

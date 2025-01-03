@@ -14,6 +14,54 @@ export function WorkshopSlideshow() {
 
   const slides = [
     {
+      title: "Herausforderungen im Management",
+      content: () => (
+        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            <blockquote className="text-xl font-medium text-gray-900 mb-8">
+              "C-Level-Führungskräfte müssen in einer dynamischen Welt klare Entscheidungen treffen – oft mit wenig Zeit und Transparenz."
+            </blockquote>
+            
+            <div className="flex justify-center mb-8">
+              <img src="/decision-graph.png" alt="Entscheidungsgraph mit Verbindungen zwischen Daten, Zeit, Team und Ressourcen" className="max-w-md" />
+            </div>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <p className="text-lg text-gray-700 italic">
+                Welche Funktionen und Erlebnisse muss die Software bieten, um Führungskräfte erfolgreich zu unterstützen?
+              </p>
+          </div>
+        </div>
+
+      )
+    },
+
+    {
+      title: "Die Perspektive des C-Levels",
+      content: () => (
+        <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+          <div className="space-y-6">
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Wie steht es um unseren Zielzustand?</h3>
+              <p className="text-lg text-gray-700 ml-4">• Verstehen wir, wo wir hinwollen?</p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Sind wir auf dem Weg?</h3>
+              <p className="text-lg text-gray-700 ml-4">• Wie erkennen wir Abweichungen frühzeitig?</p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Wie engagiert ist die Organisation?</h3>
+              <p className="text-lg text-gray-700 ml-4">• Was motiviert unsere Teams, diesen Weg mitzugehen?</p>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    {
       title: "Workshop-Ablauf",
       content: () => (
         <div className={`space-y-6 transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>

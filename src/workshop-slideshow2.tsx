@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { DecisionGraph } from './DecisionGraph.tsx';
 
-export function WorkshopSlideshow() {
+export function WorkshopSlideshow2() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [hoveredButton, setHoveredButton] = useState(null);
@@ -85,48 +85,49 @@ export function WorkshopSlideshow() {
     },
 
     {
-      title: "Vom Fortschrittsmeeting zum Fortschrittsdialog",
+      title: "Herausforderungen im Management",
       content: () => (
         <div className={`space-y-6 transition-opacity duration-500 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            <blockquote className="text-xl font-medium text-gray-900 mb-8">
+              "C-Level-Führungskräfte müssen in einer dynamischen Welt klare Entscheidungen treffen – oft mit wenig Zeit und Transparenz."
+            </blockquote>
             
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">1. Effizienz: Prozesse optimieren</h4>
-                <div className="ml-4 space-y-2">
-                  <p className="text-gray-700">• Wie können administrative Aufgaben vereinfacht werden?</p>
-                  <p className="text-gray-700">• Welche Prozesse lassen sich durch KI automatisieren?</p>
-                  <p className="text-gray-700">• Wie gestalten wir Abläufe benutzerfreundlicher?</p>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">2. Innovation: Dialog entwickeln</h4>
-                <div className="ml-4 space-y-2">
-                  <p className="text-gray-700">• Wie etablieren wir eine offene Kommunikationskultur?</p>
-                  <p className="text-gray-700">• Wie gestalten wir konstruktive Dialoge?</p>
-                  <p className="text-gray-700">• Wie nutzen wir verschiedene Perspektiven gewinnbringend?</p>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">3. Erkenntnis: Wissen generieren</h4>
-                <div className="ml-4 space-y-2">
-                  <p className="text-gray-700">• Wie erkennen wir relevante Muster und Zusammenhänge?</p>
-                  <p className="text-gray-700">• Wie fördern wir tiefgreifende Einsichten?</p>
-                  <p className="text-gray-700">• Wie aktivieren wir das kollektive Wissen?</p>
-                </div>
-              </div>
-            </div>
+            <DecisionGraph />
           </div>
 
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-            <div className="flex items-center gap-3">
-              <p className="text-lg text-gray-700">
-                Der Fokus liegt auf der intelligenten Unterstützung durch KI-Technologie.
+              <p className="text-lg text-gray-700 italic">
+                Welche Funktionen und Erlebnisse muss eine AI-gestützte Software bieten, um Führungskräfte erfolgreich zu unterstützen?
               </p>
+          </div>
+        </div>
+
+      )
+    },
+
+    {
+      title: "Die Perspektive des C-Levels",
+      content: () => (
+        <div className={`space-y-6 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div className="space-y-6">
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Wie steht es um unseren Zielzustand?</h3>
+              <p className="text-lg text-gray-700 ml-4">• Verstehen wir, wo wir hinwollen?</p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Sind wir auf dem Weg?</h3>
+              <p className="text-lg text-gray-700 ml-4">• Wie erkennen wir Abweichungen frühzeitig?</p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Wie engagiert ist die Organisation?</h3>
+              <p className="text-lg text-gray-700 ml-4">• Was motiviert unsere Teams, diesen Weg mitzugehen?</p>
             </div>
           </div>
         </div>
@@ -134,18 +135,31 @@ export function WorkshopSlideshow() {
     },
 
     {
-      title: "Kundeninterview",
+      title: "Kundeninterview C-Level",
       content: () => (
         <div className={`space-y-6 transition-opacity duration-500 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}>
+          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Interviewvorbereitung (5 Min)</h3>
+            <div className="ml-4 space-y-2">
+            <p className="text-gray-700">• C-Level-Vertreter: Matthias</p>
+            <p className="text-gray-700">• Interviewer: Alex</p>
+            <p className="text-gray-700">• Restliche Teammitglieder sind Beobachter und machen sich Notizen</p>
+            </div>
+          </div>
 
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Interviewdurchführung (15 Min)</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Interviewdurchführung (10 Min)</h3>
             <div className="ml-4 space-y-2">
-            <p className="text-gray-700">• Kunde Matthias</p>
-            <p className="text-gray-700">• Interviewer: Wolfgang</p>
-            <p className="text-gray-700">• Restliche Teammitglieder sind Beobachter und machen sich Notizen</p>
+              <p className="text-gray-700">• Der C-Level-Vertreter versetzt sich in die Rolle einer Führungskraft</p>
+              <p className="text-gray-700">• Interviewer stellt offene Fragen zu:</p>
+              <ul className="list-disc ml-8 text-gray-700">
+                <li>Entscheidungsprozessen</li>
+                <li>Herausforderungen bei der Zielerreichung</li>
+                <li>Wünschen an ein AI-gestütztes Management-Tool</li>
+              </ul>
+              <p className="text-gray-700">• Beobachter notieren wichtige Aussagen und Schmerzpunkte</p>
             </div>
           </div>
 
@@ -170,14 +184,14 @@ export function WorkshopSlideshow() {
         }`}>
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Identifiziere die Kernprobleme aus deiner Sicht:</h3>
-            <p className="text-gray-700 ml-4">• Wo siehst du die größten Herausforderungen?</p>
+            <p className="text-gray-700 ml-4">• Wo siehst du die größten Herausforderungen für Führungskräfte im Umgang mit Zielen, Fortschritt und Engagement?</p>
           </div>
 
           <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Entwickle erste Ansätze:</h3>
             <div className="ml-4 space-y-2">
               <p className="text-gray-700">• Welche Ideen könnten diese Herausforderungen lösen?</p>
-              <p className="text-gray-700">• Wie sollte eine AI-led Software gestaltet sein?</p>
+              <p className="text-gray-700">• Wie sollte eine AI-led Software gestaltet sein, um den C-Level optimal zu unterstützen?</p>
             </div>
           </div>
 
